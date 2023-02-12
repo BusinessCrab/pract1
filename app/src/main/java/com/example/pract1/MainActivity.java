@@ -82,8 +82,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
-        Toast toast = Toast.makeText(getApplicationContext() , "onCreat" , Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getApplicationContext() , "onCreate" , Toast.LENGTH_SHORT);
         toast.show();
         Log.d(TAG , "onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast toast = Toast.makeText(getApplicationContext() , "onStart" , Toast.LENGTH_SHORT);
+        toast.show();
+        Log.d(TAG , "onStart");
     }
 }
