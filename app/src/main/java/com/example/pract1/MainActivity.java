@@ -103,4 +103,12 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG , "onStop");
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast toast = Toast.makeText(getApplicationContext() , "onDestroy" , Toast.LENGTH_SHORT);
+        toast.show();
+        Log.d(TAG , "onDestroy");
+    }
+
 }
