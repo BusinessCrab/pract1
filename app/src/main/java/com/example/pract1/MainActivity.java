@@ -119,4 +119,11 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG , "onPause");
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast toast = Toast.makeText(getApplicationContext() , "onResume" , Toast.LENGTH_SHORT);
+        toast.show();
+        Log.d(TAG, "onResume");
+    }
 }
