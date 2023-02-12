@@ -94,4 +94,13 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
         Log.d(TAG , "onStart");
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Toast toast = Toast.makeText(getApplicationContext() , "onStop" , Toast.LENGTH_SHORT);
+        toast.show();
+        Log.d(TAG , "onStop");
+    }
+
 }
