@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Toast toast = Toast.makeText(getApplicationContext() , "onCreate" , Toast.LENGTH_SHORT);
+        toast.show();
+        Log.d(TAG , "onCreate");
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -79,13 +83,16 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    /*
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(savedInstanceState);
         Toast toast = Toast.makeText(getApplicationContext() , "onCreate" , Toast.LENGTH_SHORT);
         toast.show();
         Log.d(TAG , "onCreate");
     }
+    */
 
     @Override
     protected void onStart() {
